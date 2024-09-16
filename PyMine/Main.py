@@ -9,8 +9,8 @@ punch_sound = Audio('place.mp3',loop = False, autoplay = False)
 grass = load_texture('grass.jpg')
 
 boxes = []
-for i in range(30):
-  for j in range(30):
+for i in range(20):
+  for j in range(20):
     box = Button(color=color.white, model='cube', position=(j,0,i),
     texture='grass.png', parent=scene, origin_y=0.5, shader = basic_lighting_shader)
     boxes.append(box)
