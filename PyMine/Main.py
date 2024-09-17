@@ -2,9 +2,9 @@ from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 from ursina.shaders import basic_lighting_shader
 
-app = Ursina()
-player = FirstPersonController()
-Sky()
+app = Ursina(title='ursina', icon='textures/ursina.ico', borderless=False, fullscreen=False, size=("800", "600"), forced_aspect_ratio=None, position=None, vsync=False, editor_ui_enabled=False, window_type='onscreen', development_mode=False, render_mode=None, show_ursina_splash=False)
+player = FirstPersonController(speed = 6)
+Sky(texture='Sky.png')
 punch_sound = Audio('place.mp3',loop = False, autoplay = False)
 grass = load_texture('grass.jpg')
 
@@ -12,7 +12,7 @@ boxes = []
 for i in range(20):
   for j in range(20):
     box = Button(color=color.white, model='cube', position=(j,0,i),
-    texture='grass.png', parent=scene, origin_y=0.5, shader = basic_lighting_shader)
+    texture='grass.jpg', parent=scene, origin_y=0.5, shader = basic_lighting_shader)
     boxes.append(box)
 
 def input(key):
