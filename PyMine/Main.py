@@ -2,7 +2,7 @@ from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 from ursina.shaders import basic_lighting_shader
 
-app = Ursina(title='PyMine', icon='ico.png', borderless=False, fullscreen=False, size=("800", "600"), forced_aspect_ratio=None, position=None, vsync=False, editor_ui_enabled=False, window_type='onscreen', development_mode=False, render_mode=None, show_ursina_splash=False)
+app = Ursina(title='PyMine', icon='ico.ico', borderless=False, fullscreen=False, size=("800", "600"), forced_aspect_ratio=None, position=None, vsync=False, editor_ui_enabled=False, window_type='onscreen', development_mode=False, render_mode=None, show_ursina_splash=False)
 player = FirstPersonController(speed = 6)
 Sky(texture='Sky.png')
 punch_sound = Audio('place.mp3',loop = False, autoplay = False)
